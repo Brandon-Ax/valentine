@@ -999,7 +999,7 @@ h1, h2, h3, .titulo-revista {
     hyphens: auto !important;
     padding: 0.7rem 0.2rem 0.3rem !important;
     margin-top: 0.8rem !important;
-    border-top: px dashed var(--rosa-claro) !important;
+    border-top: 1px dashed var(--rosa-claro) !important;
     max-width: 100% !important;
 }
 
@@ -1105,4 +1105,60 @@ h1, h2, h3, .titulo-revista {
     .texto-rojo {
         font-size: clamp(1.8rem, 6vw, 2.2rem);
     }
+}
+/* =============================================
+   ⊱ CORRECCIÓN: PANTALLAS 3 Y 4 ARRIBA (SIN SCROLL)
+   ============================================= */
+
+/* ----- PANTALLA 3: LA GRAN PREGUNTA ----- */
+#pantalla3 {
+    display: flex !important;
+    align-items: flex-start !important;   /* 👈 ALINEADO ARRIBA */
+    justify-content: center !important;
+    min-height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#pantalla3 .contenedor-pregunta {
+    margin-top: 5vh !important;          /* Ajusta este valor para subir/bajar */
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+}
+
+/* ----- PANTALLA 4: CONFIRMACIÓN ----- */
+#pantalla4 {
+    display: flex !important;
+    align-items: flex-start !important;  /* 👈 ALINEADO ARRIBA */
+    justify-content: center !important;
+    height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#pantalla4 .fondo-rojo-intenso {
+    display: flex !important;
+    align-items: flex-start !important;  /* 👈 ALINEADO ARRIBA */
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#pantalla4 .corazon-imagen {
+    margin-top: 3vh !important;          /* Ajusta para subir/bajar el corazón */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ✍️ CORRECCIÓN DEL ERROR EN TEXTO POÉTICO (BORDER) */
+#pantalla4 .texto-poetico-corazon {
+    border-top: 1px dashed var(--rosa-claro) !important;  /* ✅ NÚMERO AGREGADO */
+}
+body, #app {
+    padding: 0 !important;
+    margin: 0 !important;
 }
