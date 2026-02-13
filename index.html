@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Revista interactiva de San Valentín 2026: una sorpresa romántica con tarjetas, tickets y corazones animados.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>San Valentín 2026 · Edición Especial</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 🌹 PANTALLA 1: CARTA CON NUBES Y LLUVIA DE CORAZONES -->
+        <section id="pantalla1" class="pantalla activa" aria-hidden="false">
+            <!-- Nubes decorativas -->
+            <div class="nube nube1"></div>
+            <div class="nube nube2"></div>
+            <div class="nube nube3"></div>
+
+            <!-- Contenedor de la lluvia de corazones (se llena con JS) -->
+            <div id="lluvia-corazones" class="lluvia-corazones"></div>
+
+            <div class="contenedor-sobre">
+                <!-- CARTA CON IMAGEN DE CANVA (mantiene id y clase para JS) -->
+                <div class="carta-diseno con-imagen" id="sobreCarta">
+                    <div class="carta-contenido">
+                        <p class="mensaje-carta">Te tengo una sorpresa</p>
+                        <p class="mensaje-carta pequeño">
+                            Descúbrela haciendo click en el <span class="cursiva">corazón</span>
+                        </p>
+                    </div>
+                </div>
+
+                <button class="corazon-late" id="corazonClick" aria-label="Abrir carta" type="button">
+                    <svg viewBox="0 0 32 32" width="80" height="80" aria-hidden="true">
+                        <path d="M16 28.5l-1.2-1C9.4 22.6 4 17.7 4 11.5 4 7 7.6 3.5 12 3.5c2.5 0 4.8 1.2 6.2 3.1 1.4-1.9 3.7-3.1 6.2-3.1 4.4 0 8 3.5 8 8 0 6.2-5.4 11.1-10.8 16l-1.2 1z" fill="#C1121F"/>
+                    </svg>
+                </button>
+                <p class="toque-cursiva">Haz clic en el corazón</p>
+            </div>
+        </section>
+
+        <!-- 🌹 PANTALLA 2: VALENTINE EDITION (REDISEÑADA CON ESTILO REFINADO) -->
+        <section id="pantalla2" class="pantalla" aria-hidden="true">
+            <!-- Nubes decorativas de fondo -->
+            <div class="nube-fondo nube-f1"></div>
+            <div class="nube-fondo nube-f2"></div>
+            <div class="revista-container glass">
+                <div class="encabezado-revista">
+                    <h1 class="titulo-revista">Valentine <span class="cursiva">Edition</span></h1>
+                    <div class="linea-decorativa"></div>
+                </div>
+
+                <div class="fecha-lemas">
+                    14 DE FEBRERO DEL 2026 • ME GUSTAS MUCHO • JUNTOS POR SIEMPRE
+                </div>
+
+                <h2 class="pregunta-principal wow">YOU BE MY <span class="cursiva">Valentine</span>?</h2>
+
+                <div class="distribucion-nombre">
+                    <span class="distribucion-label">DISTRIBUCION:</span> EXCLUSIVA PARA LA PERSONA QUE MÁS AMO EN EL MUNDO<br>
+                    <span class="nombre-destacado">Claudia</span>
+                </div>
+
+                <div class="columnas-revista">
+                    <div class="columna-texto">
+                        <p><strong>Escrito por.</strong> <strong class="cursiva">un programador enamorado</strong></p>
+                        <p>El universo es mágico, porque no sé cómo decidió dejar en mi camino a la personita más hermosa del cosmos. Ella me tiene completamente loco; a veces me pregunto: ¿qué me hiciste?... No es un reclamo, solo quiero entenderlo. Me tienes como nadie me ha tenido. Estoy lleno de determinación y convencido de lo que quiero, con la seguridad de que no voy a fallarte y con la certeza de que siempre serás tú, mi lugar especial, mi hogar y mi camino.</p>
+                    </div>
+                    
+                    <div class="columna-imagen">
+                        <div class="marco-rosa marco-imagen">
+                            <!-- IMAGEN REAL  -->
+                            <img src="imagenes/love.png"
+                                alt="Imagen romántica de San Valentín" 
+                                class="imagen-romantica">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mision-list">
+                    <div class="mision-item">No te veo con los ojos, te veo con el alma...</div>
+                    <div class="mision-item">Manten tu determinación y confía en el amor que nos une.</div>
+                </div>
+
+                <!-- 🎫 BOLETOS ESTILO TICKET (mejorados) -->
+                <div class="tickets-container">
+                    <div class="ticket">
+                        <div class="ticket-left">
+                            <div class="heart-icon">❤️</div>
+                            <span>Love</span>
+                        </div>
+                        <div class="ticket-center">
+                            <span class="ticket-label">CUPÓN PARA:</span>
+                            <span class="ticket-title">Una cita sorpresa</span>
+                        </div>
+                        <div class="ticket-right">
+                            <div class="heart-icon">❤️</div>
+                            <span>Vale</span>
+                        </div>
+                    </div>
+                    <div class="ticket">
+                        <div class="ticket-left">
+                            <div class="heart-icon">❤️</div>
+                            <span>Love</span>
+                        </div>
+                        <div class="ticket-center">
+                            <span class="ticket-label">CUPÓN PARA:</span>
+                            <span class="ticket-title">Una cena dulce</span>
+                        </div>
+                        <div class="ticket-right">
+                            <div class="heart-icon">❤️</div>
+                            <span>Vale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paginacion">
+                    <button class="btn-pagina" id="btnPaginaAnterior">PAG. ANTERIOR</button>
+                    <button class="btn-pagina" id="btnPaginaSiguiente">PAG. SIGUIENTE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌹 PANTALLA 3: LA GRAN PREGUNTA (CON FONDO DE ENSOÑACIÓN) -->
+        <section id="pantalla3" class="pantalla" aria-hidden="true">
+            <div class="cupido cupido-esquina-1">❤️</div>
+            <div class="cupido cupido-esquina-2">❤️</div>
+            <div class="cupido cupido-esquina-3">❤️</div>
+            <div class="cupido cupido-esquina-4">❤️</div>
+            <div class="contenedor-pregunta glass">
+                <h3 class="titulo-gran-pregunta">La gran pregunta</h3>
+                <div class="texto-elegante">
+                    <p class="texto-espaciado">Dicho todo esto...</p>
+                </div>
+                <div class="frase-destacada">
+                    <span class="frase-cursiva-grande">¿Quieres ser mi San Valentín?</span>
+                </div>
+                <div class="botones-romanticos">
+                    <button class="btn-respuesta glow-hover" id="btnRespuesta1">Obvio, lo estaba esperando</button>
+                    <button class="btn-respuesta glow-hover" id="btnRespuesta2">Sí, por supuesto</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌹 PANTALLA 4: CONFIRMACIÓN (CORAZÓN CON BANDERÍN Y FONDO ROJO PROFUNDO) -->
+        <section id="pantalla4" class="pantalla" aria-hidden="true">
+            <div class="fondo-rojo-intenso">
+                <div class="corazon-imagen" style="background-image: url('https://media-public.canva.com/AuaII/MAHApfAuaII/1/tl.png');">
+                    <div class="contenido-corazon">
+                        <div class="titulo-corazon">
+                            <span class="texto-rojo">You are<br>my Valentine.</span>
+                        </div>
+                        <div class="relicario-iniciales">
+                            <span class="inicial">G</span>
+                            <span class="corazoncito">❤️</span>
+                            <span class="inicial">M</span>
+                        </div>
+                        <div class="texto-poetico-corazon">
+                            <p>Gracias por decir que sí.<br>
+                            Prepárate para un día bonito,<br>
+                            sonrisas inevitables y<br>
+                            recuerdos que siempre<br>
+                            se van a quedar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="corazones-flotantes" class="corazones-flotantes"></div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
